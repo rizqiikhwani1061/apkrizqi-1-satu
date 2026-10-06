@@ -1,10 +1,74 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <title>Judul Halaman</title>
-    </head>
-    <body>
-        <h1>Halo Dunia!</h1>
-        <p>Ini paragraf pertama saya.</p>
-    </body>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistem Keranjang Belanja</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <h2 style="text-align: center; color: #333;">Keranjang Belanja</h2>
+        
+        <table class="cart-table">
+            <thead>
+                <tr>
+                    <th>Nama Produk</th>
+                    <th>Harga</th>
+                    <th>Qty</th>
+                    <th>Subtotal</th>
+                </tr>
+            </thead>
+            <tbody id="cartBody">
+            </tbody>
+        </table>
+
+        <div class="total-box">
+            Total Pembayaran: <br>
+            <span id="cartTotal" class="total-price"><strong>Rp 0</strong></span>
+        </div>
+        <button id="btnBukaCheckout" class="btn-checkout">Checkout Sekarang</button>
+
+        <div class="riwayat-container" id="containerRiwayat" style="display: none;">
+            <h3>Riwayat Pesanan Anda</h3>
+            <table class="cart-table" id="tabelRiwayat">
+                <thead>
+                    <tr>
+                        <th>Tanggal</th>
+                        <th>Jml Barang</th>
+                        <th>Total Bayar</th>
+                    </tr>
+                </thead>
+                <tbody id="bodyRiwayat">
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <div id="modalCheckout" class="modal-overlay">
+        <div class="modal-content">
+            <h3>Data Pembeli</h3>
+            <form id="formCheckout">
+                <div class="form-group">
+                    <label>Nama Lengkap:</label>
+                    <input type="text" id="inputNama" required>
+                </div>
+                <div class="form-group">
+                    <label>Alamat Pengiriman:</label>
+                    <textarea id="inputAlamat" rows="3" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label>No. HP:</label>
+                    <input type="text" id="inputNoHP" required>
+                </div>
+                <button type="submit" class="btn-submit">Selesaikan Pesanan</button>
+                <button type="button" id="btnBatal" class="btn-cancel">Batal</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="script.js"></script>
+</body>
 </html>
