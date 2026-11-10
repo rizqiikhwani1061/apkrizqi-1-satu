@@ -1,0 +1,190 @@
+/* ===== Pengaturan Dasar ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+    color: #334155;
+    background-color: #f8fafc; 
+}
+
+/* ===== Header ===== */
+.header {
+    background: linear-gradient(135deg, #87CEEB, #FFFFFF); 
+    color: #1e293b; 
+    text-align: center;
+    padding: 40px 20px;
+    border-bottom: 2px solid #e0f2fe;
+}
+
+/* Styling foto profil lingkaran */
+.foto-profil {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 4px solid #87CEEB; /* Border foto disesuaikan dengan biru langit */
+    object-fit: cover;
+    margin-bottom: 16px;
+    box-shadow: 0 4px 10px rgba(135, 206, 235, 0.4); /* Bayangan biru muda */
+}
+
+.header h1 {
+    font-size: 36px;
+    margin-bottom: 8px;
+}
+
+.header p {
+    font-size: 16px;
+    font-weight: 500;
+}
+
+/* ===== Navigasi ===== */
+.nav {
+    background-color: #1e293b;
+    text-align: center;
+    padding: 12px;
+}
+
+.nav a {
+    color: #e2e8f0;
+    text-decoration: none;
+    margin: 0 16px;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.nav a:hover {
+    color: #87CEEB; /* Warna hover navigasi menjadi biru langit */
+}
+
+/* ===== Konten ===== */
+.konten {
+    max-width: 800px;
+    margin: 30px auto;
+    padding: 0 20px;
+}
+
+.konten section {
+    background-color: #ffffff;
+    border-radius: 12px;
+    padding: 24px;
+    margin-bottom: 24px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.konten h2 {
+    color: #0284c7; /* Biru langit yang lebih pekat untuk teks judul agar kontras */
+    border-bottom: 3px solid #e0f2fe;
+    padding-bottom: 8px;
+    margin-bottom: 16px;
+}
+
+.konten p {
+    margin-bottom: 12px;
+}
+
+/* ===== Daftar Hobi ===== */
+.list-hobi {
+    list-style: none;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.list-hobi li {
+    padding: 12px 16px;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.list-hobi li:last-child {
+    border-bottom: none;
+}
+
+.list-hobi li:nth-child(even) {
+    background-color: #f0f9ff; /* Styling zebra warna biru sangat muda */
+}
+
+/* ===== Tabel ===== */
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th,
+td {
+    border: 1px solid #e2e8f0;
+    padding: 10px 14px;
+    text-align: left;
+}
+
+th {
+    /* Gradasi Biru Langit ke Putih untuk header tabel */
+    background: linear-gradient(135deg, #87CEEB, #f0f9ff); 
+    color: #1e293b;
+    font-weight: bold;
+}
+
+tr:nth-child(even) {
+    background-color: #f0f9ff;
+}
+
+tr:hover {
+    background-color: #e0f2fe;
+}
+
+/* ===== Formulir ===== */
+form label {
+    display: block;
+    font-weight: bold;
+    margin: 12px 0 4px;
+}
+
+form input,
+form textarea {
+    width: 100%;
+    padding: 10px 12px;
+    border: 2px solid #cbd5e1;
+    border-radius: 8px;
+    font-family: inherit;
+    transition: border-color 0.3s ease;
+}
+
+form input:focus,
+form textarea:focus {
+    outline: none;
+    border-color: #87CEEB; /* Warna outline saat mengetik menjadi biru langit */
+    box-shadow: 0 0 5px rgba(135, 206, 235, 0.5);
+}
+
+form button {
+    margin-top: 16px;
+    /* Gradasi Biru Langit ke Putih untuk Tombol */
+    background: linear-gradient(135deg, #87CEEB, #f0f9ff); 
+    color: #0f172a;
+    font-weight: bold;
+    border: 2px solid #87CEEB; /* Diberi border agar tombol terlihat tegas */
+    padding: 12px 28px;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: transform 0.2s ease, background 0.3s ease, box-shadow 0.2s ease;
+}
+
+form button:hover {
+    /* Efek hover tombol: gradasi dibalik dan ditambah bayangan */
+    background: linear-gradient(135deg, #f0f9ff, #87CEEB); 
+    transform: scale(1.05); /* Efek membesar saat hover (Tugas 3) */
+    box-shadow: 0 4px 10px rgba(135, 206, 235, 0.4);
+}
+
+/* ===== Footer ===== */
+.footer {
+    background-color: #1e293b;
+    color: #94a3b8;
+    text-align: center;
+    padding: 20px;
+}

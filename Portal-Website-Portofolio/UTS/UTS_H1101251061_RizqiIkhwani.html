@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Rizqi Ikhwani H1101251061</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 400px;
+            margin: 50px auto;
+            padding: 20px;
+            background: #f0f8ff;
+        }
+
+        .kalkulator {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        input {
+            padding: 10px;
+            margin: 5px;
+            font-size: 16px;
+            width: 80%;
+            box-sizing: border-box;
+        }
+
+        button {
+            padding: 10px 15px;
+            margin: 5px;
+            font-size: 16px;
+            background: #3498db;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #2980b9;
+        }
+
+        .hasil {
+            font-size: 29px;
+            font-weight: bold;
+            color: #2c3e50;
+            margin-top: 20px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div style="text-align: left; margin-bottom: 20px;">
+        <a href="../index.html"
+            style="text-decoration: none; color: #2c3e50; font-family: Arial, sans-serif; font-size: 14px; font-weight: bold; padding: 8px 12px; background: white; box-shadow: 0 2px 5px rgba(0,0,0,0.1); border-radius: 5px; display: inline-block;">
+            &larr; Kembali ke portofolio
+        </a>
+    </div>
+    <div class="Hitung Diskon">
+        <h2>Hitung Diskon</h2>
+        <p> Catatan: Di Bagian Masukan Diskon, Berupa Hasil Diskon Yang Telah Di Hitung
+            Cth: Diskon 12%: 12/100 = 0.12
+        </p>
+        <input type="number" id="angka1" placeholder="Masukan Harga"><br>
+        <input type="number" id="angka2" placeholder="Masukan Diskon"><br><br>
+        <button onclick="persen()">%</button>
+        <button onclick="reset()" style="background : #e74c3c;">Reset</button>
+        <div class="hasil">Rp<span id="hasilAngka">0</span></div>
+    </div>
+
+    <script>
+        function persen() {
+            let a = parseFloat(document.getElementById('angka1').value);
+            let b = parseFloat(document.getElementById('angka2').value);
+            document.getElementById('hasilAngka').innerHTML = a * b;
+
+        }
+
+        function reset() {
+            document.getElementById('angka1').value = '';
+            document.getElementById('angka2').value = '';
+            document.getElementById('hasilAngka').innerHTML = '0';
+
+        }   
+    </script>
+</body>
+
+</html>

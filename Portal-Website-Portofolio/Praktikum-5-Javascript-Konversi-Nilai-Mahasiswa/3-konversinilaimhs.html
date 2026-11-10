@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Konversi Nilai Mahasiswa</title>
+    <style>
+        body { font-family: Arial, sans-serif; max-width: 400px; margin: 50px auto; padding: 20px; background: #f0f8ff; }
+        .wadah-program { background: rgb(158, 238, 250); padding: 30px; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); text-align: center; }
+        input { padding: 10px; margin: 5px; font-size: 16px; width: 80%; box-sizing: border-box; }
+        button { padding: 10px 15px; margin: 5px; font-size: 16px; background: #f4f7f8; color: rgb(31, 26, 26); border: none; border-radius: 5px; cursor: pointer; }
+        button:hover { background: #e8dd06; }
+        .hasil { font-size: 28px; font-weight: bold; color: #2c3e50; margin-top: 20px; }
+    </style>
+</head>
+<body>
+    <div style="text-align: left; margin-bottom: 20px;">
+        <a href="../index.html"
+            style="text-decoration: none; color: #2c3e50; font-family: Arial, sans-serif; font-size: 14px; font-weight: bold; padding: 8px 12px; background: rgba(158, 238, 250, 0.5); border-radius: 5px;">
+            &larr; Kembali ke portofolio
+        </a>
+    </div>
+
+    <div class="wadah-program">
+        <h2>🎓 Konversi Nilai Mahasiswa</h2>
+
+        <input type="number" id="inputNilai" placeholder="Masukkan Nilai (0 - 100)"><br><br>
+        
+        <button onclick="konversiNilai()">Cek Grade</button>
+        <button onclick="resetNilai()" style="background: #f00505; color: white;">Reset</button>
+
+        <div class="hasil"><span id="idTarget">-</span></div>
+    </div>
+
+    <script>
+        function konversiNilai() {
+            let inputElement = document.getElementById('inputNilai').value;
+            
+            if (inputElement === "") {
+                document.getElementById('idTarget').innerHTML = "Masukkan nilai!";
+                return;
+            }
+
+            let nilai = Number(inputElement);
+            let grade = "";
+
+            if (nilai >= 90 && nilai <= 100) {
+                grade = "Grade A";
+            } else if (nilai >= 80 && nilai <= 89) {
+                grade = "Grade B";
+            } else if (nilai >= 70 && nilai <= 79) {
+                grade = "Grade C";
+            } else if (nilai >= 60 && nilai <= 69) {
+                grade = "Grade D";
+            } else if (nilai >= 0 && nilai < 60) {
+                grade = "Grade E";
+            } else {
+                grade = "Nilai tidak valid!"; 
+            }
+
+            document.getElementById('idTarget').innerHTML = grade;
+        }
+
+        function resetNilai() {
+            document.getElementById('inputNilai').value = "";
+            document.getElementById('idTarget').innerHTML = '-';
+        }
+    </script>
+</body>
+</html>

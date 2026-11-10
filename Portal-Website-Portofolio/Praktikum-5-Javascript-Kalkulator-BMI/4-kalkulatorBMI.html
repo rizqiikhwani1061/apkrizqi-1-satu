@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Kalkulator BMI</title>
+    <style>
+       body { 
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+            background: linear-gradient(135deg, #74ebd5 0%, #ACB6E5 100%);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column; /* TAMBAHKAN BARIS INI */
+            justify-content: center;
+            align-items: center;
+            margin: 0;
+        }
+        .bmi-card { 
+            background: white; 
+            padding: 40px; 
+            border-radius: 15px; 
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2); 
+            text-align: center; 
+            width: 100%;
+            max-width: 350px;
+        }
+        h2 {
+            color: #2c3e50;
+            margin-top: 0;
+            margin-bottom: 25px;
+        }
+        .input-group {
+            text-align: left;
+            margin-bottom: 15px;
+        }
+        .input-group label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+            color: #34495e;
+        }
+        input { 
+            padding: 12px; 
+            font-size: 16px; 
+            width: 100%; 
+            box-sizing: border-box; 
+            border: 2px solid #bdc3c7;
+            border-radius: 8px;
+            outline: none;
+            transition: border-color 0.3s;
+        }
+        input:focus {
+            border-color: #3498db;
+        }
+        button { 
+            padding: 12px; 
+            width: 100%;
+            margin-top: 15px; 
+            font-size: 16px; 
+            font-weight: bold;
+            background: #3498db; 
+            color: white; 
+            border: none; 
+            border-radius: 8px; 
+            cursor: pointer; 
+            transition: background 0.3s;
+        }
+        button:hover { 
+            background: #2980b9; 
+        }
+        button.btn-reset {
+            background: #e74c3c;
+            margin-top: 10px;
+        }
+        button.btn-reset:hover {
+            background: #c0392b;
+        }
+        .hasil-box { 
+            margin-top: 25px;
+            padding: 15px;
+            border-radius: 8px;
+            background: #f8f9fa;
+            border: 1px dashed #bdc3c7;
+        }
+        .angka-bmi { 
+            font-size: 32px; 
+            font-weight: bold; 
+            color: #2c3e50; 
+            margin: 10px 0;
+        }
+        .status-bmi {
+            font-size: 20px;
+            font-weight: bold;
+            color: #e67e22;
+        }
+    </style>
+</head>
+<body>
+    <div style="text-align: left; margin-bottom: 20px;">
+        <a href="../index.html"
+            style="text-decoration: none; color: #2c3e50; font-family: Arial, sans-serif; font-size: 14px; font-weight: bold; padding: 8px 12px; background: rgba(158, 238, 250, 0.5); border-radius: 5px;">
+            &larr; Kembali ke portofolio
+        </a>
+    </div>
+
+    <div class="bmi-card">
+        <h2>⚖️ Kalkulator BMI</h2>
+        
+        <div class="input-group">
+            <label>Berat Badan (kg)</label>
+            <input type="number" id="inputBerat" placeholder="Contoh: 65">
+        </div>
+        <div class="input-group">
+            <label>Tinggi Badan (cm)</label>
+            <input type="number" id="inputTinggi" placeholder="Contoh: 170">
+        </div>
+        
+        <button onclick="hitungBMI()">Hitung BMI</button>
+        <button class="btn-reset" onclick="resetForm()">Reset</button>
+        
+        <div class="hasil-box">
+            <div style="font-size: 14px; color: #7f8c8d;">Angka BMI Anda:</div>
+            <div class="angka-bmi" id="hasilAngka">0.0</div>
+            <div class="status-bmi" id="hasilStatus">-</div>
+        </div>
+    </div>
+
+    <script>
+        function hitungBMI() {
+            let berat = Number(document.getElementById('inputBerat').value);
+            let tinggiCm = Number(document.getElementById('inputTinggi').value);
+            
+            if (berat <= 0 || tinggiCm <= 0) {
+                alert("Harap masukkan berat dan tinggi badan yang valid!");
+                return;
+            }
+
+            let tinggiM = tinggiCm / 100;
+            let bmi = berat / (tinggiM * tinggiM);
+            
+            let status = "";
+
+            if (bmi < 18.5) {
+                status = "Kurus";
+            } else if (bmi >= 18.5 && bmi <= 24.9) {
+                status = "Normal";
+            } else if (bmi >= 25.0 && bmi <= 29.9) {
+                status = "Gemuk";
+            } else if (bmi >= 30) {
+                status = "Obesitas";
+            }
+
+            document.getElementById('hasilAngka').innerHTML = bmi.toFixed(1);
+            
+            document.getElementById('hasilStatus').innerHTML = status;
+        }
+
+        function resetForm() {
+            document.getElementById('inputBerat').value = "";
+            document.getElementById('inputTinggi').value = "";
+            document.getElementById('hasilAngka').innerHTML = "0.0";
+            document.getElementById('hasilStatus').innerHTML = "-";
+        }
+    </script>
+
+</body>
+</html>

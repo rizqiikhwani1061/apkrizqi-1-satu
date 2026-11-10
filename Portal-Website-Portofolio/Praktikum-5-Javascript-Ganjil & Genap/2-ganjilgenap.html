@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Cek Ganjil Genap</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 400px;
+            margin: 50px auto;
+            padding: 20px;
+            background: #f0f8ff;
+        }
+
+        .kalkulator {
+            background: rgb(158, 238, 250);
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        input {
+            padding: 10px;
+            margin: 5px;
+            font-size: 16px;
+            width: 80%;
+            box-sizing: border-box;
+        }
+
+        button {
+            padding: 10px 15px;
+            margin: 5px;
+            font-size: 16px;
+            background: #f4f7f8;
+            color: rgb(31, 26, 26);
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #e8dd06;
+        }
+
+        .hasil {
+            font-size: 28px;
+            font-weight: bold;
+            color: #2c3e50;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div style="text-align: left; margin-bottom: 20px;">
+        <a href="../index.html"
+            style="text-decoration: none; color: #2c3e50; font-family: Arial, sans-serif; font-size: 14px; font-weight: bold; padding: 8px 12px; background: rgba(158, 238, 250, 0.5); border-radius: 5px;">
+            &larr; Kembali ke portofolio
+        </a>
+    </div>
+    <div class="kalkulator">
+        <h2>🔢 Cek Ganjil/Genap</h2>
+        <input type="number" id="inputAngka" placeholder="Masukkan sebuah angka"><br><br>
+        <button onclick="cekGanjilGenap()">Cek Angka</button>
+        <button onclick="resetGanjilGenap()" style="background: #f00505; color: white;">Reset</button>
+        <div class="hasil"><span id="hasilGanjilGenap">-</span></div>
+    </div>
+
+    <script>
+        function cekGanjilGenap() {
+            let inputElement = document.getElementById('inputAngka').value;
+
+            if (inputElement === "") {
+                document.getElementById('hasilGanjilGenap').innerHTML = "Masukkan angka!";
+                return;
+            }
+
+            let angka = Number(inputElement);
+            let teksHasil = "";
+
+            if (angka % 2 === 0) {
+                teksHasil = "Angka Genap";
+            } else {
+                teksHasil = "Angka Ganjil";
+            }
+
+            document.getElementById('hasilGanjilGenap').innerHTML = teksHasil;
+        }
+
+        function resetGanjilGenap() {
+            document.getElementById('inputAngka').value = "";
+            document.getElementById('hasilGanjilGenap').innerHTML = '-';
+        }
+    </script>
+</body>
+
+</html>

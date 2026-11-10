@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daun Asri - Toko Tanaman Hias</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.5/dist/jquery.validate.min.js"></script>
+</head>
+<body>
+    <div style="background-color: #f1f8e9; padding: 10px 5%; border-bottom: 1px solid #c5e1a5; text-align: left;">
+        <a href="../index.html" style="text-decoration: none; color: #2e7d32; font-family: 'Segoe UI', Tahoma, sans-serif; font-size: 14px; font-weight: 600;">
+            &larr; Kembali ke portofolio
+        </a>
+    </div>
+
+    <nav>
+        <div class="container">
+            <a href="#beranda" class="logo">🌿 Daun Asri</a>
+            <ul class="nav-list">
+                <li><a href="#beranda">Beranda</a></li>
+                <li class="dropdown">
+                    <button class="dropdown-btn" type="button">Koleksi ▼</button>
+                    <ul class="dropdown-menu">
+                        <li><a href="#produk" data-tab="#tab-indoor">Tanaman Indoor</a></li>
+                        <li><a href="#produk" data-tab="#tab-outdoor">Tanaman Outdoor</a></li>
+                        <li><a href="#produk" data-tab="#tab-alat">Perlengkapan</a></li>
+                    </ul>
+                </li>
+                <li><a href="#tentang">Tentang</a></li>
+                <li><a href="#member">Member</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header id="beranda" class="hero">
+        <div class="container">
+            <h1 id="heroJudul">Hijaukan Rumahmu</h1>
+            <p id="heroTeks">Tanaman hias sehat, cantik, dan mudah dirawat langsung dari kebun kami di Pontianak.</p>
+            <a href="#produk" class="btn-hero">Lihat Koleksi</a>
+        </div>
+    </header>
+
+    <section id="produk">
+        <div class="container">
+            <h2>Koleksi Tanaman Kami</h2>
+
+            <div class="tabs">
+                <button class="tab active" type="button" data-target="#tab-indoor">Indoor</button>
+                <button class="tab" type="button" data-target="#tab-outdoor">Outdoor</button>
+                <button class="tab" type="button" data-target="#tab-alat">Perlengkapan</button>
+            </div>
+
+            <div class="tab-area">
+                <div id="tab-indoor" class="tab-panel grid">
+                    <div class="card">
+                        <div class="emoji">🪴</div>
+                        <h3>Monstera Deliciosa</h3>
+                        <p>Daun besar berlubang yang ikonik, cocok untuk sudut ruang tamu.</p>
+                        <div class="price">Rp 85.000</div>
+                    </div>
+                    <div class="card">
+                        <div class="emoji">🌱</div>
+                        <h3>Sansevieria</h3>
+                        <p>Lidah mertua tahan banting, membantu menyegarkan udara dalam ruangan.</p>
+                        <div class="price">Rp 45.000</div>
+                    </div>
+                    <div class="card">
+                        <div class="emoji">🍃</div>
+                        <h3>Pothos Golden</h3>
+                        <p>Tanaman rambat berdaun belang kuning, perawatan sangat mudah.</p>
+                        <div class="price">Rp 30.000</div>
+                    </div>
+                </div>
+
+                <div id="tab-outdoor" class="tab-panel grid">
+                    <div class="card">
+                        <div class="emoji">🌺</div>
+                        <h3>Bunga Kembang Sepatu</h3>
+                        <p>Bunga merah merekah sepanjang tahun, menyukai sinar matahari penuh.</p>
+                        <div class="price">Rp 35.000</div>
+                    </div>
+                    <div class="card">
+                        <div class="emoji">🌴</div>
+                        <h3>Palem Kuning</h3>
+                        <p>Memberi nuansa tropis di teras dan halaman rumah.</p>
+                        <div class="price">Rp 120.000</div>
+                    </div>
+                    <div class="card">
+                        <div class="emoji">🌵</div>
+                        <h3>Kaktus Mini</h3>
+                        <p>Hemat air, pas untuk pemula yang sering lupa menyiram.</p>
+                        <div class="price">Rp 20.000</div>
+                    </div>
+                </div>
+
+                <div id="tab-alat" class="tab-panel grid">
+                    <div class="card">
+                        <div class="emoji">🏺</div>
+                        <h3>Pot Keramik</h3>
+                        <p>Pot minimalis dengan lubang drainase, tersedia ukuran sedang.</p>
+                        <div class="price">Rp 55.000</div>
+                    </div>
+                    <div class="card">
+                        <div class="emoji">💧</div>
+                        <h3>Semprotan Air</h3>
+                        <p>Botol semprot 500 ml untuk menjaga kelembapan daun.</p>
+                        <div class="price">Rp 15.000</div>
+                    </div>
+                    <div class="card">
+                        <div class="emoji">🧪</div>
+                        <h3>Pupuk Organik</h3>
+                        <p>Pupuk cair kaya nutrisi, kemasan 1 liter.</p>
+                        <div class="price">Rp 40.000</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="tentang" class="tentang">
+        <div class="container narrow">
+            <h2>Tentang Daun Asri</h2>
+            <p>Daun Asri berdiri dari kecintaan pada tanaman. Kami memilih setiap tanaman dengan teliti,
+               merawatnya dengan sabar, lalu mengirimkannya dalam kondisi segar ke rumahmu.</p>
+
+            <button type="button" id="btnInfo" class="btn-outline">Tampilkan Tips Perawatan</button>
+            <div id="tipsBox" class="tips">
+                <ul>
+                    <li>Siram saat permukaan tanah mulai kering, bukan setiap hari.</li>
+                    <li>Letakkan tanaman indoor dekat jendela dengan cahaya tidak langsung.</li>
+                    <li>Bersihkan daun dengan kain lembap agar tetap bisa berfotosintesis optimal.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section id="member">
+        <div class="container">
+            <h2>Daftar Member Daun Asri</h2>
+            <p class="sub">Dapatkan diskon 10% dan info koleksi terbaru.</p>
+
+            <form id="formMember" class="form-box">
+                <div class="form-group">
+                    <label for="mNama">Nama Lengkap</label>
+                    <input type="text" id="mNama" name="nama" placeholder="Nama lengkap">
+                </div>
+
+                <div class="form-group">
+                    <label for="mEmail">Email Aktif</label>
+                    <input type="text" id="mEmail" name="email" placeholder="nama@domain.com">
+                </div>
+
+                <div class="form-group">
+                    <label for="mHp">Nomor WhatsApp / HP</label>
+                    <input type="text" id="mHp" name="hp" placeholder="10-12 digit angka">
+                </div>
+
+                <div class="form-group">
+                    <label for="mKota">Kota Pengiriman</label>
+                    <select id="mKota" name="kota">
+                        <option value="">-- Pilih Kota --</option>
+                        <option>Pontianak</option>
+                        <option>Kubu Raya</option>
+                        <option>Singkawang</option>
+                        <option>Mempawah</option>
+                        <option>Lainnya</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="mUsia">Usia</label>
+                    <input type="text" id="mUsia" name="usia" placeholder="Minimal 17 tahun">
+                </div>
+
+                <div class="form-group">
+                    <label for="mPassword">Password</label>
+                    <input type="password" id="mPassword" name="password" placeholder="Minimal 8 karakter, ada huruf &amp; angka">
+                </div>
+
+                <div class="form-group">
+                    <label for="mKonfirmasi">Konfirmasi Password</label>
+                    <input type="password" id="mKonfirmasi" name="konfirmasi" placeholder="Ulangi password yang sama">
+                </div>
+
+                <div class="form-group cek">
+                    <label class="inline">
+                        <input type="checkbox" id="mSetuju" name="setuju"> Saya menyetujui syarat &amp; ketentuan member
+                    </label>
+                </div>
+
+                <button type="submit" class="btn">Daftar Member</button>
+
+                <div class="sukses" id="sukses">
+                    <strong>Pendaftaran Berhasil!</strong> Selamat bergabung menjadi member Daun Asri.
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Daun Asri | Praktikum Pemrograman Web Dasar</p>
+    </footer>
+
+    <div id="toast"></div>
+    <button id="backToTop" type="button" aria-label="Kembali ke atas">&#8593;</button>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
+

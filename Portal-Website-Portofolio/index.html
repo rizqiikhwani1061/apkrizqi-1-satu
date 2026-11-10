@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Portofolio Rizqi Ikhwani</title>
+
+    <!-- Menghubungkan file CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ===== Bagian atas ===== -->
+    <header class="header">
+        <h2 class="logo">Rizqi Ikhwani</h2>
+        <button id="tombol-tema">Mode gelap</button>
+    </header>
+
+    <main class="isi">
+
+        <!-- ===== Perkenalan ===== -->
+        <section class="perkenalan">
+            <h1>Halo, saya Rizqi Ikhwani.</h1>
+            <p>Mahasiswa Sistem Informasi yang suka membuat aplikasi web.</p>
+        </section>
+
+        <!-- ===== Daftar proyek ===== -->
+        <h2>Proyek saya</h2>
+
+        <!-- Kotak pencarian (dipakai oleh script.js) -->
+        <input type="text" id="cari" placeholder="Cari proyek...">
+
+        <section class="daftar-proyek">
+
+            <!-- Satu kartu = satu proyek. 
+           href mengarah ke index.html di dalam folder proyek tersebut. -->
+            <a class="kartu" href="buku-tamu-digital/index.html">
+                <h3>Buku Tamu Digital</h3>
+                <p>Formulir pencatatan tamu kantor.</p>
+            </a>
+
+            <a class="kartu" href="mav-platform/index.html">
+                <h3>MAV Platform</h3>
+                <p>Menu berbeda untuk setiap peran pengguna.</p>
+            </a>
+
+            <a class="kartu" href="FolderEsCream/index.html">
+                <h3>Ice Cream</h3>
+                <p>Katalog produk dan varian rasa toko es krim.</p>
+            </a>
+
+            <a class="kartu" href="FolderKopi/webkopi.html">
+                <h3>Web Kopi</h3>
+                <p>Website kedai kopi interaktif dengan fitur tab menu dan validasi formulir menggunakan jQuery.</p>
+            </a>
+
+            <a class="kartu" href="Modul-Praktikum-1-pengenalan-HTML/index.html">
+                <h3>Praktikum 1: Pengenalan HTML</h3>
+                <p>Latihan dasar pembuatan struktur halaman web menggunakan elemen HTML.</p>
+            </a>
+
+            <a class="kartu" href="Praktikum-Sesi-ke-4/index.html">
+                <h3>Praktikum Sesi 4</h3>
+                <p>Halaman profil biodata diri yang menampilkan daftar hobi, tabel jadwal pelajaran, dan formulir kontak interaktif.</p>
+            </a>
+
+            <a class="kartu" href="Praktikum-5-Javascript-Kalkulator/1-kalkulator.html">
+                <h3>Praktikum 5: JavaScript (Kalkulator)</h3>
+                <p>Implementasi logika operasi matematika dasar pada web.</p>
+            </a>
+
+             <a class="kartu" href="Praktikum-5-Javascript-Ganjil & Genap/2-ganjilgenap.html">
+                <h3>Praktikum 5: JavaScript (Ganjil & Genap)</h3>
+                <p>Program sederhana untuk menentukan angka ganjil dan genap.</p>
+            </a>
+
+             <a class="kartu" href="Praktikum-5-Javascript-Konversi-Nilai-Mahasiswa/3-konversinilaimhs.html">
+                <h3>Praktikum 5: JavaScript (Konversi Nilai Mahasiswa)</h3>
+                <p>Sistem pengubah nilai angka akademik menjadi nilai huruf.</p>
+            </a>
+
+             <a class="kartu" href="Praktikum-5-Javascript-Kalkulator-BMI/4-kalkulatorBMI.html">
+                <h3>Praktikum 5: JavaScript (Kalkulator BMI)</h3>
+                <p>Sistem interaktif penghitung Indeks Massa Tubuh (BMI).</p>
+            </a>
+
+
+            <a class="kartu" href="Tugas-Pertemuan-7/html/index.html">
+                <h3>Tugas Pertemuan 7</h3>
+                <p>Website portofolio pribadi interaktif yang dilengkapi fitur Dark/Light Mode dan desain responsif.</p>
+            </a>
+
+            <a class="kartu" href="Tugas-Praktikum-Sesi-9/index.html">
+                <h3>Tugas Praktikum Sesi 9</h3>
+                <p>Halaman sistem keranjang belanja dengan rincian harga dinamis dan modal checkout.</p>
+            </a>
+
+            <a class="kartu" href="UTS/UTS_H1101251061_RizqiIkhwani.html">
+                <h3>UTS</h3>
+                <p>Pengerjaan Ujian Tengah Semester.</p>
+            </a>
+
+            <a class="kartu" href="Praktikum_11/index.html">
+                <h3>Praktikum_11</h3>
+                <p>Website toko tanaman hias dengan antarmuka tab kategori interaktif dan form registrasi member yang divalidasi menggunakan jQuery.</p>
+            </a>
+
+
+
+
+            <!-- Mau menambah proyek? Salin satu blok <a class="kartu"> di atas,            lalu ubah href, judul, dan deskripsinya. -->
+
+        </section>
+
+        <p id="pesan-kosong" class="pesan-kosong">Proyek tidak ditemukan.</p>
+
+    </main>
+
+    <!-- Menghubungkan file JavaScript (letakkan paling bawah) -->
+    <script src="script.js"></script>
+</body>
+
+</html>
